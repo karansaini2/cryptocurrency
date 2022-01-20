@@ -1,38 +1,173 @@
+@import url("https://fonts.googleapis.com/css2?family=Simonetta:wght@900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Luxurious+Roman&family=Playfair+Display&family=Simonetta:wght@900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .App {
+  width: 100%;
+  background-color: #222831;
+}
+
+.header {
+  height: 30vh;
+}
+
+.one-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.one-row .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90px;
+  height: 80px;
+  background-color: #6558ff;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  margin-top: 30px;
+}
+.one-row .logo i {
+  font-size: 45px;
+  color: #0ff826;
+}
+
+.one-row h1 {
+  color: #fbf2ff;
+  margin-left: 20px;
+  margin-top: 30px;
+  font-family: Simonetta;
+  font-size: 2.5rem;
+}
+
+.input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+  margin-left: 20px;
+  padding: 20px;
+}
+
+.input input {
+  outline: none;
+  border: 5px solid grey;
+  padding: 10px;
+  width: 500px;
+  height: 50px;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+  font-size: 1.2rem;
+}
+
+.crypto-display {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.card {
+  height: 300px;
+  width: 315px;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+  background-color: #e41f7b;
+  margin: 10px;
+  transition: 0.4s;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -ms-transition: 0.4s;
+  -o-transition: 0.4s;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: scale(1.06);
+  -webkit-transform: scale(1.06);
+  -moz-transform: scale(1.06);
+  -ms-transform: scale(1.06);
+  -o-transform: scale(1.06);
+}
+
+.card .heading {
+  font-family: Simonetta;
   text-align: center;
+  padding: 8px;
+  color: #ffffff;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.card img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 12px;
+  width: 87px;
+  height: 87px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.inner {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-top: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.inner-area {
+  display: inline-block;
+  background-color: #ff8ba0;
+  width: 270px;
+  border-radius: 15px;
+  height: 100px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.inner-area h3 {
+  font-family: Luxurious Roman;
+  text-align: center;
+  margin: 5px;
+}
+
+@media screen and (max-width: 420px) {
+  .header {
+    height: 30vh;
   }
-  to {
-    transform: rotate(360deg);
+
+  .one-row .logo {
+    width: 70px;
+    height: 60px;
+  }
+
+  .one-row h1 {
+    font-size: 2rem;
+  }
+
+  .input input {
+    padding: 10px;
+    width: 500px;
+    height: 40px;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 376px) {
+  .header {
+    height: 35vh;
   }
 }
